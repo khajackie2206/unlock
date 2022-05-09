@@ -1,5 +1,7 @@
 <?php
+
 namespace Khanguyennfq\Unlock;
+
 use Khanguyennfq\Unlock\Controller\MainController;
 use Khanguyennfq\Unlock\Controller\HomeController;
 use Khanguyennfq\Unlock\Controller\CalController;
@@ -33,13 +35,13 @@ class Application
      * @param MainController $mainController
      * @param CalController $calController
      */
-    public function __construct(HomeController $homeController, MainController $mainController, CalController $calController){
+    public function __construct(HomeController $homeController, MainController $mainController, CalController $calController)
+    {
         $this->homeController = $homeController;
         $this->mainController = $mainController;
         $this->calController = $calController;
         $this->requestMethod = $_SERVER['REQUEST_METHOD'];
         $this->requestUri = $_SERVER['REQUEST_URI'];
-
     }
     /**
      * return void
@@ -47,12 +49,12 @@ class Application
     public function start()
     {
         $request = $this->requestMethod . ':' . $this->requestUri;
-        switch ($request){
+        switch ($request) {
             case 'GET:/unlock/unlock/':
                 $response = $this->homeController->index();
                 break;
             default:
-                $response = $this->calController->calSum(5,4);
+                $response = $this->calController->calSum(5, 4);
         }
         echo $response;
     }

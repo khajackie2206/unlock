@@ -1,6 +1,8 @@
 <?php
+
 namespace Khanguyennfq\Unlock\TestTrait;
-Trait TestTrait
+
+trait TestTrait
 {
     public function getSum($a, $b)
     {

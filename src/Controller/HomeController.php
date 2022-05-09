@@ -1,5 +1,7 @@
 <?php
+
 namespace Khanguyennfq\Unlock\Controller;
+
 class HomeController
 {
     /**
