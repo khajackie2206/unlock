@@ -1,6 +1,6 @@
 <?php
 
-namespace Khanguyennfq\Unlock\TestTrait;
+namespace Khanguyennfq\Unlock\Helper;
 
 class UseTrait
 {

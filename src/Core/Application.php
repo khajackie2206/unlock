@@ -1,10 +1,12 @@
 <?php
 
-namespace Khanguyennfq\Unlock;
+namespace Khanguyennfq\Unlock\Core;
 
 use Khanguyennfq\Unlock\Controller\MainController;
 use Khanguyennfq\Unlock\Controller\HomeController;
 use Khanguyennfq\Unlock\Controller\CalController;
+use Khanguyennfq\Unlock\Helper\Cat;
+use Khanguyennfq\Unlock\Helper\UseTrait;
 
 class Application
 {
@@ -12,6 +14,7 @@ class Application
      * @var HomeController
      */
     protected HomeController $homeController;
+
     /**
      * @var MainController
      */
@@ -21,10 +24,12 @@ class Application
      * @var CalController
      */
     protected CalController $calController;
+
     /**
      * @var string
      */
     protected $requestMethod;
+
     /**
      * @var string
      */
@@ -58,9 +63,15 @@ class Application
         }
         echo $response;
     }
-    public function get($a, $b)
+    public function get(int $a, int $b)
     {
-        $result = new TestTrait\UseTrait();
+        $result = new UseTrait();
         return $result->getSum($a, $b);
+    }
+    public function getAnimals(): void
+    {
+        $callCat = new Cat();
+        $callCat->animalRun();
+        $callCat->animalEat();
     }
 }
