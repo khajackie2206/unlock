@@ -19,4 +19,5 @@ $application = new Application(
 $application->start();
 echo "<br>";
 //echo $application->get(4,3);
-echo $application->getAnimals();
+//echo $application->getAnimals();
+echo $application->getRun();

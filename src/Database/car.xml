@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Car>
+    <Car>
+         <CarId>1</CarId>
+         <Name>Rolls Royce</Name>
+         <Cost>50000</Cost>
+         <Country>USA</Country>
+    </Car>
+    <Car>
+        <CarId>2</CarId>
+        <Name>Lamborghini</Name>
+        <Cost>55000</Cost>
+        <Country>USA</Country>
+    </Car>
+    <Car>
+        <CarId>3</CarId>
+        <Name>Vin fast</Name>
+        <Cost>30000</Cost>
+        <Country>Viet Nam</Country>
+    </Car>
+</Car>

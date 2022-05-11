@@ -1,13 +1,13 @@
 <?php
 
 namespace Khanguyennfq\Unlock\Core;
-
 use Khanguyennfq\Unlock\Controller\MainController;
 use Khanguyennfq\Unlock\Controller\HomeController;
 use Khanguyennfq\Unlock\Controller\CalController;
-use Khanguyennfq\Unlock\Helper\Cat;
 use Khanguyennfq\Unlock\Helper\UseTrait;
-
+use Khanguyennfq\Unlock\Helper\Cat;
+use Khanguyennfq\Unlock\Helper\Car;
+use Khanguyennfq\Unlock\Helper\Dog;
 class Application
 {
     /**
@@ -55,9 +55,9 @@ class Application
     {
         $request = $this->requestMethod . ':' . $this->requestUri;
         switch ($request) {
-            case 'GET:/unlock/unlock/':
-                $response = $this->homeController->index();
-                break;
+            case 'GET:/':
+               $response = $this->homeController->index();
+               break;
             default:
                 $response = $this->calController->calSum(5, 4);
         }
@@ -73,5 +73,13 @@ class Application
         $callCat = new Cat();
         $callCat->animalRun();
         $callCat->animalEat();
+    }
+    public function getRun(): void
+    {
+        $callDog = new Dog();
+        $callDog->run();
+        echo "<br>";
+        $callCar = new Car();
+        $callCar->run();
     }
 }
