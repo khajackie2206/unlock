@@ -11,8 +11,8 @@
             "email": "khajackie2206@gmail.com"
         }
     ],
-    "require": {},
     "require-dev": {
-        "squizlabs/php_codesniffer": "3.*"
+        "squizlabs/php_codesniffer": "3.*",
+        "phpunit/phpunit": "^9"
     }
 }

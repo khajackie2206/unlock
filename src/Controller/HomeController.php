@@ -10,6 +10,6 @@ class HomeController
 
     public function index()
     {
-        return 'Hello, Iam in home';
+        return "Hello, I'm in home";
     }
 }

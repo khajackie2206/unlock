@@ -1,6 +1,7 @@
 <?php
 
 namespace Khanguyennfq\Unlock\Core;
+
 use Khanguyennfq\Unlock\Controller\MainController;
 use Khanguyennfq\Unlock\Controller\HomeController;
 use Khanguyennfq\Unlock\Controller\CalController;
@@ -8,6 +9,7 @@ use Khanguyennfq\Unlock\Helper\UseTrait;
 use Khanguyennfq\Unlock\Helper\Cat;
 use Khanguyennfq\Unlock\Helper\Car;
 use Khanguyennfq\Unlock\Helper\Dog;
+
 class Application
 {
     /**
@@ -28,12 +30,12 @@ class Application
     /**
      * @var string
      */
-    protected $requestMethod;
+    protected string $requestMethod;
 
     /**
      * @var string
      */
-    protected $requestUri;
+    protected string $requestUri;
 
     /**
      * @param HomeController $homeController
@@ -56,30 +58,29 @@ class Application
         $request = $this->requestMethod . ':' . $this->requestUri;
         switch ($request) {
             case 'GET:/':
-               $response = $this->homeController->index();
-               break;
+                $response = $this->homeController->index();
+                break;
             default:
                 $response = $this->calController->calSum(5, 4);
         }
         echo $response;
     }
-    public function get(int $a, int $b)
+
+    public static function get(int $a, int $b): int
     {
         $result = new UseTrait();
         return $result->getSum($a, $b);
     }
-    public function getAnimals(): void
+
+    public function getAnimal(): string
     {
         $callCat = new Cat();
-        $callCat->animalRun();
-        $callCat->animalEat();
+        return $callCat->animalEat();
     }
-    public function getRun(): void
+
+    public function getRun(): string
     {
         $callDog = new Dog();
-        $callDog->run();
-        echo "<br>";
-        $callCar = new Car();
-        $callCar->run();
+        return $callDog->run();
     }
 }

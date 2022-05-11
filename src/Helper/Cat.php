@@ -2,16 +2,16 @@
 
 namespace Khanguyennfq\Unlock\Helper;
 
-class Cat extends Animals
+class Cat extends Animal
 {
     public function animalRun()
     {
         // TODO: Implement animalRun() method.
-        echo "Cat run with 4 legs </br>";
+        return "Cat run with 4 legs";
     }
     public function animalEat()
     {
         // TODO: Implement animalEat() method.
-        echo "Cat eat mouses </br>";
+        return "Cat eat mouses";
     }
 }
