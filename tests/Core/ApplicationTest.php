@@ -6,17 +6,14 @@ namespace Khanguyennfq\Unlock\tests\Core;
 
 use Khanguyennfq\Unlock\Core\Application;
 use PHPUnit\Framework\TestCase;
-
+use Khanguyennfq\Unlock\Helper\Dog;
 class ApplicationTest extends TestCase
 {
     /**
      * @dataProvider getProvider
      * @return void
      */
-    public function testGetRun()
-    {
 
-    }
     public function testSum($params, $expected)
     {
         $result = Application::get($params['number1'], $params['number2']);
