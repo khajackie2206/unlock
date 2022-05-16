@@ -6,7 +6,6 @@ namespace Khanguyennfq\Unlock\tests\Core;
 
 use Khanguyennfq\Unlock\Core\Application;
 use PHPUnit\Framework\TestCase;
-use Khanguyennfq\Unlock\Helper\Dog;
 class ApplicationTest extends TestCase
 {
     /**
