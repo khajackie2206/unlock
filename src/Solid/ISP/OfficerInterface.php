@@ -2,7 +2,7 @@
 
 namespace Khanguyennfq\Unlock\Solid\ISP;
 
-interface IOfficer
+interface OfficerInterface
 {
     public function workOnOffice(): string;
 }

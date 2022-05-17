@@ -10,6 +10,10 @@ use Khanguyennfq\Unlock\Solid\OpenClosed\Tiger;
 use Khanguyennfq\Unlock\Solid\OpenClosed\DashBoard;
 use Khanguyennfq\Unlock\Solid\ISP\Farmer;
 use Khanguyennfq\Unlock\Solid\ISP\Officer;
+use Khanguyennfq\Unlock\Singleton\DBConnect;
+use Khanguyennfq\Unlock\Factory\South;
+use Khanguyennfq\Unlock\Factory\North;
+
 /*
  * Client want to watch a movie with Facade
  */
@@ -34,5 +38,26 @@ echo $dashboard->eatList($arr);
 
 $farmer = new Farmer();
 $officer = new Officer();
-echo $farmer->workOnField();
-echo $officer->workOnOffice();
+echo $farmer->workOnField() . "<br>";
+echo $officer->workOnOffice()."<br>";
+
+/*
+ * Singleton
+ */
+
+$con1 = DBConnect::getConn();
+$con2 = DBConnect::getConn();
+
+if ($con1 === $con2)
+{
+    echo "They are completely similar to each other!!!";
+}
+
+/*
+ * Factory
+ */
+
+$southTree = new South();
+echo $southTree->getTreeName();
+$nouthTree = new North();
+echo $nouthTree->getTreeName();

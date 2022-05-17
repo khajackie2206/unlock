@@ -2,7 +2,7 @@
 
 namespace Khanguyennfq\Unlock\Solid\ISP;
 
-interface IHuman
+interface HumanInterface
 {
     public function eat(): string;
     public function sleep(): string;

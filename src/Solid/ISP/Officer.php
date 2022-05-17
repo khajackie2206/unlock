@@ -2,7 +2,7 @@
 
 namespace Khanguyennfq\Unlock\Solid\ISP;
 
-class Officer implements IHuman, IOfficer
+class Officer implements HumanInterface, OfficerInterface
 {
     public function eat(): string
     {

@@ -2,7 +2,7 @@
 
 namespace Khanguyennfq\Unlock\Solid\ISP;
 
-interface IFarmer
+interface FarmerInterface
 {
     public function workOnField(): string;
 }
